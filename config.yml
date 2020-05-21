@@ -1,7 +1,6 @@
 title: "Hugo Bootstrap"
 baseURL: "http://example.org/"
 languageCode: "en"
-enableInlineShortcodes: true
 
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
