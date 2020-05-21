@@ -4,7 +4,7 @@
   "description": "Starter application for building Hugo site with bootstrap plugins and components",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "hugo server -D --disableFastRender"
   },
   "repository": {
     "type": "git",
