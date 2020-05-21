@@ -2,7 +2,9 @@ title: "Hugo Bootstrap"
 baseURL: "http://example.org/"
 languageCode: "en"
 
-# disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
 publishDir:             "wwwroot"
 
