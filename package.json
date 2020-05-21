@@ -1,0 +1,23 @@
+{
+  "name": "hugo-bootstrap",
+  "version": "1.0.0",
+  "description": "Starter application for building Hugo site with bootstrap plugins and components",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FpRezDev/hugo-bootstrap.git"
+  },
+  "keywords": [
+    "hugo",
+    "bootstrap"
+  ],
+  "author": "FpRezDev <fprez.developer@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FpRezDev/hugo-bootstrap/issues"
+  },
+  "homepage": "https://github.com/FpRezDev/hugo-bootstrap#readme"
+}
