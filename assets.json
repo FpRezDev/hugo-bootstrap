@@ -1,14 +1,6 @@
 [
   {
-    "src": "node_modules/popper.js/**/*",
-    "dest": "site/assets/libs/popper.js/"
-  },
-  {
-    "src": "node_modules/jquery/**/*",
-    "dest": "site/assets/libs/jquery/"
-  },
-  {
-    "src": "node_modules/bootstrap/**/*",
-    "dest": "site/assets/libs/bootstrap/"
+    "src": "node_modules/bootstrap/scss/**/*.scss",
+    "dest": "site/assets/libs/bootstrap/scss/"
   }
 ]

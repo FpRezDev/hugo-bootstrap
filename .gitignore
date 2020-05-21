@@ -2,6 +2,7 @@
 wwwroot/
 site/assets/libs/
 site/static/libs/
+resources/
 
 # Logs
 logs

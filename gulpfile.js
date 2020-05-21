@@ -5,29 +5,44 @@
  * - this is merely acting as a libs package manager
  * - all items in assets directory will not be copied to wwwroot unless .Permalink
  * -- but in production build they should be bundled and minified within hugo app
+ * -- static assets.. such as fonts and images or sourcemaps(in development) should be configured to output to static/libs/[libname]/[webfonts|img|etc...]
  */
-const { src, dest, parallel } = require('gulp');
+const { src, dest } = require('gulp');
 const merge = require('merge-stream');
 const del = require('del');
-const assetsConfig = require('./assets.json');
 
-const install = () => {
-  let tasks = assetsConfig.map((cfg) => {
+const cleanRoot = () => {
+  console.log('Cleaning: wwwroot/');
+  return del('wwwroot/');
+}
+
+const cleanLibs = () => {
+  console.log('Cleaning: site/assets/libs/ & site/static/libs/');
+  return del(['site/assets/libs/', 'site/static/libs/']);
+}
+
+const install = (config) => {
+  let tasks = config.map((cfg) => {
+    console.log(`-------------------------`);
+    console.log(`Installing: ${cfg.src}`);
+    console.log(`To: ${cfg.dest}`);
     return src(cfg.src)
             .pipe(dest(cfg.dest));
   });
   return merge(tasks);
 }
 
-const cleanLibs = () => {
-  return del(['assets/libs/', 'static/libs/']);
+const installDevLibs = () => {
+  console.log('Preparing to install dev libs:');
+  return install(require('./assets.dev.json'));
 }
 
-const cleanRoot = () => {
-  return del('wwwroot/');
+const installLibs = () => {
+  console.log('Preparing to install libs:');
+  return install(require('./assets.json'));
 }
 
-exports.install = install;
 exports.cleanLibs = cleanLibs;
 exports.cleanRoot = cleanRoot;
-exports.clean = parallel(cleanLibs, cleanRoot);
+exports.installDevLibs = installDevLibs;
+exports.installLibs = installLibs;

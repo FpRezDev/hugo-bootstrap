@@ -1,0 +1,26 @@
+[
+  {
+    "src": "node_modules/popper.js/dist/umd/popper.js",
+    "dest": "site/assets/libs/popper.js/"
+  },
+  {
+    "src": "node_modules/popper.js/dist/umd/popper.js.map",
+    "dest": "site/static/libs/popper.js/"
+  },
+  {
+    "src": "node_modules/jquery/dist/jquery.slim.js",
+    "dest": "site/assets/libs/jquery/"
+  },
+  {
+    "src": "node_modules/bootstrap/dist/js/bootstrap.js",
+    "dest": "site/assets/libs/bootstrap/js/"
+  },
+  {
+    "src": "node_modules/bootstrap/dist/js/bootstrap.js.map",
+    "dest": "site/static/libs/bootstrap/js/"
+  },
+  {
+    "src": "node_modules/bootstrap/scss/**/*.scss",
+    "dest": "site/assets/libs/bootstrap/scss/"
+  }
+]

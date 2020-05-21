@@ -1,0 +1,21 @@
+// _Variables.scss
+
+// Theme Colors
+$primary:   #3c626e;
+$dark:      #283140;
+$dark-accent: #739ead;
+$light:      #f7f6f5;
+$light-accent: #93a4a7;
+
+// Theme Color Map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $dark-accent,
+  "dark": $dark,
+  "dark-accent": $dark-accent,
+  "light": $light,
+  "light-accent": $light-accent,
+);
+
+// NO ROUNDED CORNERS unless .rounded is specified
+$enable-rounded: false !default;

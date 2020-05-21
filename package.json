@@ -4,13 +4,15 @@
   "description": "Starter application for building Hugo site with bootstrap plugins and components",
   "main": "index.html",
   "scripts": {
+    "clean:libs": "gulp cleanLibs",
+    "clean:root": "gulp cleanRoot",
+    "clean": "npm-run-all clean:*",
+    "install:dev": "gulp installDevLibs",
+    "install:prod": "gulp installLibs",
     "start:hugo": "hugo server -D --disableFastRender",
-    "install": "gulp install",
-    "cleanLibs": "gulp cleanLibs",
-    "cleanRoot": "gulp cleanRoot",
-    "clean": "gulp clean",
-    "start": "npm-run-all install start:hugo",
-    "build": "npm-run-all clean install hugo"
+    "build:hugo": "hugo",
+    "start": "npm-run-all clean install:dev start:hugo",
+    "build": "npm-run-all clean install:prod build:hugo"
   },
   "repository": {
     "type": "git",
@@ -27,12 +29,14 @@
   },
   "homepage": "https://github.com/FpRezDev/hugo-bootstrap#readme",
   "devDependencies": {
+    "autoprefixer": "^9.8.0",
     "bootstrap": "^4.5.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "jquery": "^3.5.1",
     "merge-stream": "^2.0.0",
     "npm-run-all": "^4.1.5",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "postcss-cli": "^7.1.1"
   }
 }
