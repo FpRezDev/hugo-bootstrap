@@ -1,3 +1,21 @@
+title: "Hugo Bootstrap"
 baseURL: "http://example.org/"
-languageCode: "en-us"
-title: "My New Hugo Site"
+languageCode: "en"
+enableInlineShortcodes: true
+
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+
+publishDir:             "wwwroot"
+
+module:
+  mounts:
+    - source:           site/assets
+      target:           assets
+    - source:           site/content
+      target:           content
+    - source:           site/data
+      target:           data
+    - source:           site/layouts
+      target:           layouts
+    - source:           site/static
+      target:           static

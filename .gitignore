@@ -1,3 +1,7 @@
+# build directories
+wwwroot/
+site/assets/
+
 # Logs
 logs
 *.log
