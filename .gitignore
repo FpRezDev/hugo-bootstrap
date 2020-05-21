@@ -1,6 +1,7 @@
 # build directories
 wwwroot/
-site/assets/
+site/assets/libs/
+site/static/libs/
 
 # Logs
 logs
