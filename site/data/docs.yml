@@ -1,0 +1,5 @@
+- name: Hugo
+  url: https://gohugo.io/documentation/
+- name: Bootstrap
+  url: https://getbootstrap.com/docs/4.5/getting-started/introduction/
+  

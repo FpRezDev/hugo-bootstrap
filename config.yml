@@ -2,6 +2,7 @@ title: "Hugo Bootstrap"
 baseURL: "http://example.org/"
 languageCode: "en"
 
+enableInlineShortcodes: true
 enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
